@@ -1,0 +1,501 @@
+// Colores
+$colorHeader: #3e7c7c;
+$colorBurlywood: burlywood;
+$colorRosa: #f18db8;
+$colorNegro: rgb(0, 0, 0);
+$colorBlanco: white;
+$colorGris: gray;
+$colorCeleste: #0D6EFD;
+
+// Tipografia
+$tipoGrafia: 'Times New Roman', Times, serif;
+
+//Funcion 
+
+@mixin fondo($imagen, $repetir, $posicionX, $posicionY, $area){
+    background-image: $imagen;
+    background-repeat: $repetir;
+    background-position-x: $posicionX;
+    background-position-y: $posicionY;
+    background-clip: $area;
+}
+
+// Header, Nav
+
+.header{
+    background-color: $colorHeader;
+    font-family: $tipoGrafia;
+}
+
+.header{
+    .contenedor-imagen-titulo{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header{
+    .contenedor-imagen-titulo{
+        img{
+            margin-top: 35px;
+            margin-left: 30px;
+            width: 100px;
+        }
+    }
+}
+
+.header{
+    .contenedor-imagen-titulo{
+        a{
+            margin: 20px;
+            text-decoration: none;
+            color: $colorBurlywood;
+        }
+    }
+}
+
+.header{
+    .contenedor-imagen-titulo{
+        a{
+            &:hover{
+                color: $colorRosa;
+                transition: 0.6s;
+            }
+        }
+    }
+}
+
+.header{
+    .contenedor-imagen-titulo{
+        a{
+            h1{                     
+                font-weight: bold;
+                font-size: 50px;
+                word-spacing: 8px;
+                padding-top: 35px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.header{
+    .contenedor-imagen-titulo{
+        a{
+            h1{
+                span{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+.redes{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.redes{
+    a{
+        text-decoration: none;
+    }
+}
+
+.redes{
+    span{
+        &:hover{
+            color: $colorNegro;
+        }
+    }
+}
+
+nav{
+    .navbar-nav{
+        li{
+            a{
+                color: $colorBlanco !important;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-left: 20px;  
+                letter-spacing: 3px;     
+            }
+        }
+    }
+}
+
+nav{
+    .navbar-nav{
+        li{
+            a{
+                &:hover{
+                    color: $colorNegro !important;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
+
+// Main
+
+main{
+    background-color: $colorHeader;
+    font-family: $tipoGrafia;
+    text-transform: uppercase;
+}
+
+main{
+    .titulo-main{
+        color: $colorBurlywood;
+        text-align: center;
+    }
+}
+
+main{
+    .titulo-main{
+        h2{
+            letter-spacing: 12px;   
+            padding-top: 5px         
+        }
+    }
+}
+
+// Index
+
+.contenedor-home{
+    @include fondo(url('../images/charlyfondo.jpg'), repeat-x, 500px, 40%, content-box);
+    width: 100%;
+    height: 800px;
+}
+
+.contenedor-home {
+    .home{
+        width: 30%;
+        background-color: $colorHeader;
+        position: relative;
+        top: 15%;
+        left: 5%;
+        border-radius: 40px;
+    }
+}
+
+.contenedor-home{
+    .home{
+        p{
+            font-size: 20px;
+            color: $colorBurlywood;
+            text-align: center;            
+            padding: 10px 15px 10px 15px;
+        }
+    }
+}
+
+// Secciones
+
+#seccion{
+    background-color: $colorBurlywood;
+    padding: 5px;
+    width: 100%;
+    min-height: 800px;
+}
+
+// Galeria
+
+.contenedor-galeria{
+    .galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+}
+
+.contenedor-galeria{
+    .galeria{
+        img{
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
+    }
+}
+
+.contenedor-galeria{
+    .galeria{
+        .texto{
+            text-align: justify;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    }
+}
+
+// Discografia
+
+.contenedor-frames{
+    padding: 5px;
+}
+
+.contenedor-frames{
+    iframe{
+        width: 100%;
+        border-radius: 40px;
+        height: 400px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+}
+
+.texto-album{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+// Tienda
+
+.tienda{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+}
+
+.tienda{
+    .item{
+
+        .tienda-imagen{           
+            img{ 
+                width: 300px;
+                
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .talle{
+            display: flex;
+            justify-content:space-around;
+            margin-top: 30px;
+            
+        }
+    }
+}
+
+.item { 
+        display: flex;
+        justify-content:space-around;
+        flex-direction: column; 
+}
+
+.contactanos{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.contactanos{
+    a{
+        color: $colorBurlywood;
+        text-decoration: none;
+    }
+}
+
+.contactanos{
+    a{
+        &:hover{
+            color: $colorRosa;
+        }
+    }
+}
+
+// Footer
+
+footer{
+    background-color: $colorHeader;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    div{
+        p{
+            font-size: 15px;
+            color: $colorBurlywood;
+            font-weight: bold;
+        }
+    }
+}
+
+// R E S P O N S I V E
+
+//Header
+
+@media screen and (min-device-width: 650px ) and (max-device-width: 849px ) {
+    .header{
+        .contenedor-imagen-titulo{    
+
+            a{
+                h1{
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: bold;
+                    font-size: 50px;
+                    word-spacing: 15px;  
+                    margin-left: 30px;        
+                }
+            }
+
+            img{
+                margin-top: 35px;
+                margin-left: 50px;
+                width: 170px;
+            }
+        }
+    } 
+}
+
+@media screen and (min-device-width: 480px ) and (max-device-width: 649px ) {
+    .header{
+        .contenedor-imagen-titulo{  
+            
+            a{
+                h1{
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: bold;
+                    font-size: 25px;
+                    word-spacing: 15px;                     
+                    
+                    span { 
+                        padding-right: 25px;
+                    }
+                }
+            }
+
+            img{                            
+                width: 100px;                
+                margin-right: 15px;
+                
+            }
+        }
+    } 
+}
+
+
+@media screen and (min-device-width: 320px ) and (max-device-width: 479px ) {
+    .header{
+        .contenedor-imagen-titulo{  
+            display: flex;
+            flex-direction: column;            
+            
+            a{
+                h1{
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: bold;
+                    font-size: 25px;
+                    word-spacing: 15px;                     
+                    
+                    span { 
+                        padding-right: 25px;
+                    }
+                }
+            }
+
+            img{       
+                      
+                width: 100px;
+                margin-bottom: -30px;
+                margin-right: 15px;                
+            }
+        }
+    } 
+}
+
+
+// Galeria 
+
+@media screen and (min-device-width: 320px ) and (max-device-width: 1699px ) {
+    
+    .contenedor-home{
+        @include fondo(url('../images/charlyfondo.jpg'), repeat-x, -700px, -100px, content-box)
+    }
+    .contenedor-galeria{
+        .galeria{
+            display: block;
+        }
+    }
+    .contenedor-galeria{
+        .galeria{
+            img{
+                margin-bottom: 10px;
+            }
+        }
+    }  
+}
+
+
+//Tienda 
+
+@media screen and (min-device-width: 1000px ) and (max-device-width: 1499px  ) {
+
+    .tienda{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+
+        .item{ 
+
+            .tienda-imagen{
+                img{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 400px;   
+                    padding-top: 15px;    
+                    padding-left: 10px;    
+                    padding-right: 5px;                          
+                }
+            }
+
+            .talle {   
+                font-size: 25px;               
+                display: flex;
+                justify-content: space-around;
+                padding-right: 200px;
+                padding-left: 150px;
+             }
+        }
+    }
+}
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 999px ) {
+
+    .tienda{
+        display: block;
+        text-align: center;
+
+        .item { 
+
+            .tienda-imagen{
+                img{
+                    width: 300px; 
+                    padding-top: 15px;                                    
+                }
+            }
+
+            .talle {   
+                font-size: 25px;
+             }
+         }
+    }   
+}
