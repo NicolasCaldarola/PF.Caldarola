@@ -499,3 +499,16 @@ footer{
          }
     }   
 }
+
+@media screen and (min-device-width: 320px ) and (max-device-width: 500px )   {
+
+
+
+.contenedor-contacto { 
+    display: flex; 
+    flex-direction: column;
+
+
+}
+
+}
