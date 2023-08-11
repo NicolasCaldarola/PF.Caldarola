@@ -260,6 +260,11 @@ footer div p {
     margin-right: 15px;
   }
 }
+@media screen and (min-device-width: 320px) and (max-device-width: 899px) {
+  .contenedor-home .home {
+    width: 90%;
+  }
+}
 @media screen and (min-device-width: 320px) and (max-device-width: 1699px) {
   .contenedor-home {
     background-image: url("../images/charlyfondo.jpg");

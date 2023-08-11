@@ -422,6 +422,16 @@ footer{
     } 
 }
 
+// Index
+
+@media screen and (min-device-width: 320px ) and (max-device-width: 899px) {
+
+    .contenedor-home {
+        .home{
+            width: 90%;          
+        }
+    }
+}
 
 // Galeria 
 
